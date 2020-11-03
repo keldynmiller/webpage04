@@ -1,7 +1,36 @@
+/*FONTS****************/
+
+@font-face {
+  font-family: BenchNine;
+  src: url(fonts/BenchNine/BenchNine-Bold.ttf);
+}
+
+@font-face{
+  font-family: BenchNine2;
+  src: url(fonts/BenchNine/BenchNine-Light.ttf);
+}
+
+@font-face{
+  font-family: BenchNine3;
+  src: url(fonts/BenchNine/BenchNine-Regular.ttf);
+}
+
+/**********************/
+
+h1 {
+    font-family: BenchNine;
+}
+
 body {
   display: flex;
   justify-content: center;
-  background: lightblue;
+  background: repeating-linear-gradient(
+  45deg,
+  #ace2f3,
+  #ace2f3 10px,
+  #a4d9e9 10px,
+  #a4d9e9 20px
+);
 }
 
 
@@ -11,27 +40,91 @@ body {
   width: 500px;
 }
 
+#hero-image {
+  display: flex;
+  justify-content: center;
+}
+
+#hero-img img{
+  width: 250px;
+  height: 250px;
+}
+
 #content-box{
   background: white;
   padding: 15px;
   margin-bottom: 15px;
+  font-family: BenchNine2;
+  box-shadow: 9px 9px 8px #98c9d8;
 }
 
 ul{
   position: relative;
-  margin-bottom: 13px;
+  margin: 25px;
   list-style-type: none;
   padding: 0px;
   display: flex;
-  justify-content: left;
+  justify-content: center;
+}
+
+li {
+  margin: 1px;
 }
 
 a {
+  font-family: BenchNine3;
   text-decoration: none;
-  background: white;
-  padding: 15px;
+  background: #ace2f3;
+  padding: 13px;
+  color: #ce60a9;
 }
 
 a:hover{
-  background: lightblue;
+  background: #a1d4e4;
+}
+
+#slider{
+  overflow: hidden;
+}
+#slider figure{
+  position: relative;
+  width: 500%;
+  margin: 0;
+  left: 0;
+  animation: 15s slider infinite;
+}
+
+#slider figure img{
+  width: 20%;
+  float: left;
+}
+
+@keyframes slider{
+  0% {
+      left: 0;
+  }
+  20% {
+      left: 0;
+  }
+  25% {
+      left: -100%;
+  }
+  45% {
+      left: -100%;
+  }
+  50% {
+      left: -200%;
+  }
+  70% {
+      left: -200%;
+  }
+  75% {
+      left: -300%;
+  }
+  95% {
+      left: -300%;
+  }
+  100% {
+      left: -400%;
+  }
 }
